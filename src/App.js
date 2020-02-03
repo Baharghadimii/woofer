@@ -1,12 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
+import Sidebar from './components/Sidebar'
 
 function App() {
   return (
     <div className="App">
-      {/* <img src={logo} className="App-logo" alt="logo" /> */}
-      <div className="sidebar"></div>
+      <Sidebar />
       <div className="main-layout"></div>
       <div className="suggestion"></div>
     </div>
