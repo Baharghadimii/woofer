@@ -1,11 +1,16 @@
 import React from 'react';
-import logo from '../logo.svg';
-import './Sidebar.scss'
+import './Sidebar.scss';
+import data from '../data/sidebar';
+import SidebarItem from './SidebarItem';
 export default function Sidebar() {
   return (
     <div className="sidebar">
-      <img src={logo} className="App-logo" alt="logo" />
-
+      <img src='https://woofer.s3.ca-central-1.amazonaws.com/logo.png' className="App-logo" alt="logo" />
+      {data.map(item => {
+        return (
+          <SidebarItem name={item.name} img={item.icon} />
+        )
+      })}
     </div>
   )
 }
