@@ -11,6 +11,7 @@ export default function Sidebar() {
           <SidebarItem name={item.name} img={item.icon} />
         )
       })}
+      <button className='woof-btn'>Woof</button>
     </div>
   )
 }
