@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.scss';
-import Sidebar from './components/Sidebar'
+import Sidebar from './components/Sidebar';
+import Feed from './components/Feed';
 
 function App() {
   return (
     <div className="App">
       <Sidebar />
-      <div className="main-layout"></div>
+      <Feed />
       <div className="suggestion"></div>
     </div>
   );
