@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+.sidebar {
+  width: 25%;
+  height: 50rem;
+  background-color: black;
+}
+.main-layout {
+  height: 50rem;
+  width: 50%;
+  background-color: blue;
+}
+.suggestion {
+  height: 50rem;
+  width: 25%;
+  background-color: red;
+}
