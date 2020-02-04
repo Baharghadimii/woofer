@@ -1,0 +1,49 @@
+.img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin: 0.5rem 0.8rem;
+}
+.name {
+  width: 7rem;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+#name {
+  width: auto;
+  font-weight: 700;
+  margin-top: 0.7rem;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+#id {
+  margin-top: 0.2rem;
+  color: #7d8080;
+}
+.lst-itm {
+  display: flex;
+  flex-direction: row;
+  height: 4rem;
+  &:hover {
+    background-color: #e1e6e6;
+  }
+}
+.sug-btn {
+  width: 5rem;
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 2rem;
+  height: 2rem;
+  margin-top: 1rem;
+  border-radius: 30px;
+  border-color: #cc6633;
+  color: #cc6633;
+  background-color: transparent;
+  &:hover {
+    background-color: #e9dcd6;
+  }
+}
