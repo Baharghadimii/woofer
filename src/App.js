@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Sidebar from './components/Sidebar';
-import Feed from './components/Feed';
+import Feed from './components/Explore/Feed';
 
 function App() {
   return (

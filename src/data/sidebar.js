@@ -24,7 +24,7 @@ export default [{
 },
 {
   name: 'Profile',
-  icon: ''
+  icon: 'https://woofer.s3.ca-central-1.amazonaws.com/Asset+6.png'
 },
 {
   name: 'More',
