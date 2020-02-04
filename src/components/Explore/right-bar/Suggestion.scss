@@ -66,9 +66,11 @@
   margin-top: 1.4rem;
   margin-left: -0.7rem;
   margin-right: 1rem;
-  &:focus ~ .sug-drop {
-    width: 1rem;
-    height: 1rem;
-    background-color: blue;
-  }
+}
+#sug-drop {
+  margin-left: -15rem;
+  margin-top: 2rem;
+  width: 7rem;
+  height: 10rem;
+  background-color: blue;
 }

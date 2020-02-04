@@ -1,7 +1,15 @@
+/* eslint-disable */
 import React from 'react';
 import './Suggestion.scss';
 import SugListItem from './SugListItem';
 export default function Suggestion() {
+  const handleMenu = () => {
+    const main = document.getElementById('sug-main');
+    const drop = document.createElement('div');
+    drop.setAttribute('className', 'sug-drop');
+    main.appendChild(drop);
+
+  }
   return (
     <div className="suggestion">
       <div className="sug-list">
@@ -14,18 +22,17 @@ export default function Suggestion() {
         <SugListItem name="Mary J" id="@MJ" img="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR4pQHNv89blKX7ICetJf1OHOEyqSUYM23ALCqE_0MJVi6dZO7c" />
         <div className="divider"></div>
         <div className="sug-see-more">
-          <a className="sug-see-more-anchor">Show more</a>
+          <a className="sug-see-more-anchor" >Show more</a>
         </div>
       </div>
-      <div className="sug-menu">
-        <a className="sug-menu-anchor">Terms</a>
-        <a className="sug-menu-anchor">Privacy policy</a>
-        <a className="sug-menu-anchor">Cookies</a>
-        <a className="sug-menu-anchor">Ads info</a>
-        <a className="sug-menu-anchor">More</a>
-        <img className="sug-menu-icon" src="https://woofer.s3.ca-central-1.amazonaws.com/Asset+11.png" />
+      <div className="sug-menu" id="sug-main">
+        <a className="sug-menu-anchor" >Terms</a>
+        <a className="sug-menu-anchor" >Privacy policy</a>
+        <a className="sug-menu-anchor" >Cookies</a>
+        <a className="sug-menu-anchor" >Ads info</a>
+        <a className="sug-menu-anchor" onClick={handleMenu}>More</a>
+        <img className="sug-menu-icon" alt="menu-dropdown" id="sg-mn" onClick={handleMenu} src="https://woofer.s3.ca-central-1.amazonaws.com/Asset+11.png" />
         <span className="sug-menu-sp">@ 2020 Woofer, Inc.</span>
-        <div className="sug-drop"></div>
       </div>
     </div>)
 }
