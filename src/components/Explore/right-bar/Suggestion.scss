@@ -1,0 +1,26 @@
+.suggestion {
+  height: 50rem;
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+}
+.sug-list {
+  width: 70%;
+  height: 20rem;
+  background-color: #f0f3f5;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.sug-title {
+  font-weight: 900;
+  font-size: 20px;
+  margin-left: -8rem;
+}
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: #e5e8e8;
+}
