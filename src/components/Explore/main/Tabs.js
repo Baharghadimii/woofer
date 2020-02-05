@@ -1,5 +1,11 @@
 import React from 'react';
 import './Tabs.scss';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 export default function DisabledTabs(props) {
 
@@ -18,21 +24,43 @@ export default function DisabledTabs(props) {
 
   return (
     <div className='tabs'>
-      <div className="tab" id="fy" onClick={() => handleChange('fy')}>
-        <span className='tab-txt'>For you</span>
-      </div>
-      <div className="tab" id="news" onClick={() => handleChange('news')}>
-        <span className='tab-txt'>News</span>
-      </div>
-      <div className="tab" id="sprt" onClick={() => handleChange('sprt')}>
-        <span className='tab-txt'>Sports</span>
-      </div>
-      <div className="tab" id="fun" onClick={() => handleChange('fun')}>
-        <span className='tab-txt'>Fun</span>
-      </div>
-      <div className="tab" id="enter" onClick={() => handleChange('enter')}>
-        <span className='tab-txt'>Entertainment</span>
-      </div>
+      <Router>
+        <div className="tab" id="fy" onClick={() => handleChange('fy')}>
+          <Link to='/'>
+            <span className='tab-txt'>For you</span>
+          </Link>
+        </div>
+      </Router>
+      <Router>
+        <div className="tab" id="news" onClick={() => handleChange('news')}>
+          <Link>
+            <span className='tab-txt'>News</span>
+          </Link>
+        </div>
+      </Router>
+      <Router>
+        <div className="tab" id="sprt" onClick={() => handleChange('sprt')}>
+          <Link>
+            <span className='tab-txt'>Sports</span>
+          </Link>
+        </div>
+      </Router>
+      <Router>
+        <Link>
+          <div className="tab" id="fun" onClick={() => handleChange('fun')}>
+            <span className='tab-txt'>Fun</span>
+          </div>
+        </Link>
+      </Router>
+      <Router>
+        <Link>
+          <div className="tab" id="enter" onClick={() => handleChange('enter')}>
+            <span className='tab-txt'>Entertainment</span>
+          </div>
+        </Link>
+
+      </Router>
+
     </div>
   )
 }

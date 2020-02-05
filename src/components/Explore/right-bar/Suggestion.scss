@@ -24,3 +24,49 @@
   height: 2px;
   background-color: #e5e8e8;
 }
+.sug-see-more {
+  display: flex;
+  text-align: left;
+  height: 4rem;
+  border-radius: 0 0 20px 20px;
+  &:hover {
+    background-color: #e1e6e6;
+  }
+}
+.sug-see-more-anchor {
+  color: #cc6633;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  cursor: pointer;
+  font-size: 17px;
+}
+.sug-menu {
+  width: 60%;
+  height: 2rem;
+  margin-top: 0.5rem;
+  font-size: 13px;
+  margin-left: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.sug-menu-anchor {
+  margin-right: 1rem;
+  margin-top: 1rem;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.sug-menu-sp {
+  margin-right: 1rem;
+  margin-top: 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.sug-menu-icon {
+  width: 0.7rem;
+  height: 0.4rem;
+  margin-top: 1.4rem;
+  margin-left: -0.7rem;
+  margin-right: 1rem;
+}
