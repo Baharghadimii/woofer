@@ -7,7 +7,7 @@ export default function DisabledTabs(props) {
   const handleChange = (value) => {
     resetBorderBottomStyle();
     document.getElementById(value).style.borderBottom = '2px solid #cc6633';
-    props.setFeed(value)
+    props.switchView(value)
   };
   const resetBorderBottomStyle = () => {
     document.getElementById('FY').style.borderBottom = '';
@@ -15,6 +15,7 @@ export default function DisabledTabs(props) {
     document.getElementById('SPRT').style.borderBottom = '';
     document.getElementById('FUN').style.borderBottom = '';
     document.getElementById('ENTR').style.borderBottom = '';
+
   }
 
   return (
