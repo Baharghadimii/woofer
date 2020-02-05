@@ -2,14 +2,8 @@
 import React from 'react';
 import './Suggestion.scss';
 import SugListItem from './SugListItem';
+import DropMenu from './DropMenu';
 export default function Suggestion() {
-  const handleMenu = () => {
-    const main = document.getElementById('sug-main');
-    const drop = document.createElement('div');
-    drop.setAttribute('className', 'sug-drop');
-    main.appendChild(drop);
-
-  }
   return (
     <div className="suggestion">
       <div className="sug-list">
@@ -30,8 +24,9 @@ export default function Suggestion() {
         <a className="sug-menu-anchor" >Privacy policy</a>
         <a className="sug-menu-anchor" >Cookies</a>
         <a className="sug-menu-anchor" >Ads info</a>
-        <a className="sug-menu-anchor" onClick={handleMenu}>More</a>
-        <img className="sug-menu-icon" alt="menu-dropdown" id="sg-mn" onClick={handleMenu} src="https://woofer.s3.ca-central-1.amazonaws.com/Asset+11.png" />
+        <a className="sug-menu-anchor" >More</a>
+        <DropMenu />
+        {/* <img className="sug-menu-icon" alt="menu-dropdown" id="sg-mn" onClick={handleMenu} src="https://woofer.s3.ca-central-1.amazonaws.com/Asset+11.png" /> */}
         <span className="sug-menu-sp">@ 2020 Woofer, Inc.</span>
       </div>
     </div>)
