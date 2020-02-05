@@ -7,6 +7,7 @@ import News from './News';
 import ForYou from './ForYou';
 import Entertainment from './Entertainment';
 import Fun from './Fun';
+import { getForYouFeed } from '../../../hooks/useDataApplication';
 
 export default function Feed() {
   const [feed, setFeed] = useState('FY');
