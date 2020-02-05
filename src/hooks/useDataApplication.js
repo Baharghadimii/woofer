@@ -1,9 +1,8 @@
 /* eslint-disable */
-
 let Twitter = require('twitter');
-
 const { consumer_key, consumer_secret, access_token_key, access_token_secret } =
-  require('../keys');
+  require('./keys');
+import React from 'react';
 
 let client = new Twitter({
 
@@ -13,6 +12,21 @@ let client = new Twitter({
   access_token_secret: access_token_secret
 });
 
+export default function useApplicationData() {
+
+  const getForYouFeed = () => {
+    let params2 = { id: '9807' };
+    client.get('/trends/place.json', params2, function (error, tweets, response) {
+      if (!error) {
+        console.log(tweets[0]);
+      } else {
+        console.log(error)
+      }
+    });
+  }
+  return { getForYouFeed };
+}
+
 // let params1 = { id: '1' };
 // client.get('/trends/place.json', params1, function (error, tweets, response) {
 //   if (!error) {
@@ -21,14 +35,6 @@ let client = new Twitter({
 //     console.log(error)
 //   }
 // });
-let params2 = { id: '9807' };
-client.get('/trends/place.json', params2, function (error, tweets, response) {
-  if (!error) {
-    console.log(tweets[0]);
-  } else {
-    console.log(error)
-  }
-});
 // let user_id = 878499037615444000;
 // let stream = client.stream('statuses/filter', { track: 'trends', language: 'en', delimited: '35.7821120598956' });
 // stream.on('data', function (event) {
